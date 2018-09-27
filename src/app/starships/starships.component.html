@@ -1,3 +1,12 @@
-<p>
-  starships works!
-</p>
+<h1>Starships</h1>
+
+<ul>
+      <li *ngFor="let star of starships">
+    <a routerLink="/details/{{star.id}}">{{ star.name }}</a>
+
+    <ul>
+      <li>Length: {{ star.length }} </li>
+      <li>Passengers: {{ star.passengers }}</li>
+    </ul>
+  </li>
+</ul>

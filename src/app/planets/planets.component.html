@@ -1,3 +1,15 @@
-<p>
-  planets works!
-</p>
+<h1>Planets</h1>
+<form>
+  <input type="text" placeholder="Search">
+  <button type="submit">Consulta</button>
+</form>
+<ul>
+      <li *ngFor="let planet of planets">
+    <a routerLink="/details/{{planet.id}}">{{ planet.name }}</a>
+
+    <ul>
+      <li>Climate: {{ planet.climate }} </li>
+      <li>Gravity: {{ planet.gravity }}</li>
+    </ul>
+  </li>
+</ul>

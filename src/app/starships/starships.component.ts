@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
-import { Observable } from 'rxjs';
+// import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-starships',
@@ -9,9 +9,12 @@ import { Observable } from 'rxjs';
 })
 export class StarshipsComponent implements OnInit {
 
-  constructor() { }
+  starships: Object[];
+
+  constructor(private data: DataService) { }
 
   ngOnInit() {
+    this.starships = this.data.getstarships();
   }
 
 }
