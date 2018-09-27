@@ -1,3 +1,19 @@
-<p>
-  sidebar works!
-</p>
+<nav>
+  <ul>
+    <li>
+      <a routerLink="people" [class.activated]="currentUrl == '/people'">
+        <i class="material-icons">person</i>
+      </a>
+    </li>
+    <li>
+      <a routerLink="planets" [class.activated]="currentUrl == '/planets'">
+        <i class="material-icons">public</i>
+      </a>
+    </li>
+    <li>
+      <a routerLink="starships" [class.activated]="currentUrl == '/starships'">
+        <i class="material-icons">flight</i>
+      </a>
+    </li>
+  </ul>
+</nav>
