@@ -30,7 +30,7 @@ export class DataService {
       .then(response => {
         // console.log(response.results);
         for(let i = 0; i< 10; i++){
-          peopleArr.push(response.results[i])
+          peopleArr.push(response[i])
         }
         // peopleArr.push(response.results)
       })
@@ -44,7 +44,7 @@ export class DataService {
       .toPromise()
       .then(response => {
         for(let i =0; i < 10; i++){
-          planetsArr.push(response.results[i])
+          planetsArr.push(response[i])
         }
       })
     return planetsArr;
@@ -56,7 +56,7 @@ export class DataService {
       .toPromise()
       .then(response => {
         for(let i = 0; i < 10; i++){
-          starArr.push(response.results[i])
+          starArr.push(response[i])
         }
       })
     return starArr;
