@@ -4,7 +4,7 @@
   <button type="submit">Consulta</button>
 </form>
 <ul>
-      <li *ngFor="let planet of planets">
+  <li *ngFor="let planet of planets">
     <a routerLink="/details/{{planet.id}}">{{ planet.name }}</a>
 
     <ul>

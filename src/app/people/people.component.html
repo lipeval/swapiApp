@@ -1,10 +1,9 @@
+<!DOCTYPE html>
 <h1>Characters</h1>
 
 <ul>
-  <!-- <li *ngFor="let person of people$"> -->
-      <li *ngFor="let person of people">
+  <li *ngFor="let person of people">
     <a routerLink="/details/{{person.id}}">{{ person.name }}</a>
-
     <ul>
       <li>{{ person.homeworld }} </li>
       <li>{{ person.species }}</li>
